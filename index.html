@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sycamore High School | Class of 2001 | 25 Year Reunion</title>
+
+  <!-- Fonts. Cormorant Garamond for the display type, Inter for everything else. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --black: #000000;
+      --gold: #C5B783;
+      --gold-dim: rgba(197, 183, 131, 0.55);
+      --gold-faint: rgba(197, 183, 131, 0.18);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--black);
+      color: var(--gold);
+      font-family: 'Inter', system-ui, sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 48px 20px;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 620px;
+      text-align: center;
+    }
+
+    /* ============================================================
+       PLACEHOLDER IMAGE
+       Replace the src below with your own image file. Drop the
+       image in the same folder as this file on GitHub, then set
+       src="your-photo.jpg" (or a full URL).
+       ============================================================ */
+    .hero-image {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      display: block;
+      border: 1px solid var(--gold-dim);
+      border-radius: 4px;
+      margin-bottom: 40px;
+      background: #0a0a0a;
+    }
+
+    .eyebrow {
+      font-size: 0.78rem;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--gold-dim);
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 600;
+      font-size: clamp(2.4rem, 7vw, 3.8rem);
+      line-height: 1.1;
+      letter-spacing: 0.01em;
+      margin-bottom: 8px;
+    }
+
+    .years {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(1.1rem, 3.5vw, 1.4rem);
+      color: var(--gold-dim);
+      font-weight: 500;
+      margin-bottom: 40px;
+    }
+
+    /* Thin gold rule between the title and the buttons */
+    .divider {
+      width: 500px;
+      height: 0.5px;
+      background: var(--gold);
+      margin: 0 auto 40px;
+    }
+
+    /* ============================================================
+       BUTTONS
+       Edit the text and the href on each <a> below to point at
+       your own links (RSVP form, photo album, tickets, etc.).
+       ============================================================ */
+    .buttons {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .btn {
+      display: block;
+      padding: 18px 20px;
+      border: 1px solid var(--gold-dim);
+      border-radius: 4px;
+      color: var(--gold);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      background: transparent;
+      transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.1s ease;
+    }
+
+    .btn:hover {
+      background: var(--gold-faint);
+      border-color: var(--gold);
+    }
+
+    .btn:active { transform: translateY(1px); }
+
+    .btn:focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 3px;
+    }
+
+    footer {
+      margin-top: 44px;
+      font-size: 0.8rem;
+      color: var(--gold-dim);
+      letter-spacing: 0.06em;
+    }
+
+    /* Stack the buttons on narrow screens */
+    @media (max-width: 480px) {
+      .buttons { grid-template-columns: 1fr; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .btn { transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+
+    <!-- Swap this placeholder for your own image -->
+    <img
+      class="hero-image"
+      src="https://placehold.co/1200x675/000000/C5B783?text=Add+Your+Photo"
+      alt="Sycamore High School Class of 2001"
+    >
+
+    <p class="eyebrow">Sycamore High School</p>
+    <h1>Class of 2001</h1>
+    <p class="years">25 Year Reunion &middot; 2001&ndash;2026</p>
+
+    <div class="divider"></div>
+
+    <nav class="buttons">
+      <!-- Change the href and label on each button -->
+      <a class="btn" href="#">RSVP</a>
+      <a class="btn" href="#">Buy Tickets</a>
+      <a class="btn" href="#">Photo Gallery</a>
+      <a class="btn" href="#">Contact Us</a>
+    </nav>
+
+    <footer>Go Spartans!</footer>
+
+  </main>
+</body>
+</html>
