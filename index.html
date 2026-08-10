@@ -5,10 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sycamore High School | Class of 2001 | 25 Year Reunion</title>
 
-  <!-- Fonts. Cormorant Garamond for the display type, Inter for everything else. -->
+  <!-- Font. EB Garamond (a faithful Garamond) loaded in bold weights.
+       Buttons use Helvetica, which is a system font (no loading needed). -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -16,6 +17,8 @@
       --gold: #C5B783;
       --gold-dim: rgba(197, 183, 131, 0.55);
       --gold-faint: rgba(197, 183, 131, 0.18);
+      /* Garamond stack: prefers the Google font, then a local Garamond, then serif fallbacks */
+      --serif: 'EB Garamond', Garamond, Georgia, 'Times New Roman', serif;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -23,7 +26,8 @@
     body {
       background: var(--black);
       color: var(--gold);
-      font-family: 'Inter', system-ui, sans-serif;
+      font-family: var(--serif);
+      font-weight: 700;              /* everything Garamond is bold by default */
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
       min-height: 100vh;
@@ -58,16 +62,18 @@
     }
 
     .eyebrow {
-      font-size: 0.78rem;
-      letter-spacing: 0.32em;
+      font-family: var(--serif);
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 0.28em;
       text-transform: uppercase;
       color: var(--gold-dim);
       margin-bottom: 18px;
     }
 
     h1 {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-weight: 600;
+      font-family: var(--serif);
+      font-weight: 700;
       font-size: clamp(2.4rem, 7vw, 3.8rem);
       line-height: 1.1;
       letter-spacing: 0.01em;
@@ -75,16 +81,17 @@
     }
 
     .years {
-      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-family: var(--serif);
+      font-weight: 700;
       font-size: clamp(1.1rem, 3.5vw, 1.4rem);
       color: var(--gold-dim);
-      font-weight: 500;
       margin-bottom: 40px;
     }
 
     /* Thin gold rule between the title and the buttons */
     .divider {
       width: 500px;
+      max-width: 100%;
       height: 0.5px;
       background: var(--gold);
       margin: 0 auto 40px;
@@ -103,6 +110,7 @@
 
     .btn {
       display: block;
+      font-family: Helvetica, Arial, sans-serif;   /* buttons use Helvetica */
       padding: 18px 20px;
       border: 1px solid var(--gold-dim);
       border-radius: 4px;
@@ -128,8 +136,10 @@
     }
 
     footer {
+      font-family: var(--serif);
+      font-weight: 700;
       margin-top: 44px;
-      font-size: 0.8rem;
+      font-size: 0.95rem;
       color: var(--gold-dim);
       letter-spacing: 0.06em;
     }
@@ -150,7 +160,7 @@
     <!-- Swap this placeholder for your own image -->
     <img
       class="hero-image"
-      src="https://placehold.co/1200x675/000000/C5B783?text=Add+Your+Photo"
+      src="your-photo.jpg"
       alt="Sycamore High School Class of 2001"
     >
 
@@ -162,7 +172,7 @@
 
     <nav class="buttons">
       <!-- Change the href and label on each button -->
-      <a class="btn" href="#">RSVP</a>
+      <a class="btn" href="#">Invitation PDF</a>
       <a class="btn" href="#">Buy Tickets</a>
       <a class="btn" href="#">Photo Gallery</a>
       <a class="btn" href="#">Contact Us</a>
